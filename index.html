@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniTrackPro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">FurniTrackPro</div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pretraži inventar...">
+        </div>
+        <div class="nav-buttons">
+            <button id="loginBtn" class="btn-primary">Prijavi se</button>
+            <button id="addItemsBtn" class="btn-secondary">Dodaj Stavke <span id="addCartCount">0</span></button>
+            <button id="requestItemsBtn" class="btn-primary">Zahtijevaj Stavke <span id="cartCount">0</span></button>
+        </div>
+    </nav>
+
+    <main>
+        <div id="filterContainer">
+            <div id="categoryFilter">
+                <h3>Kategorija</h3>
+                <div id="categoryTabs"></div>
+            </div>
+            <div id="supplierFilter">
+                <h3>Dobavljač</h3>
+                <select id="supplierSelect"></select>
+            </div>
+        </div>
+        <div id="inventoryItems" class="item-grid"></div>
+    </main>
+
+    <div id="requestModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Zahtijevaj Stavke</h2>
+            <div id="jobOrderInput">
+                <label for="jobOrderNumber">Broj Radnog Naloga:</label>
+                <input type="text" id="jobOrderNumber">
+            </div>
+            <div id="cartItems" class="cart-items"></div>
+            <div id="cartTotal"></div>
+            <button id="confirmRequest" class="btn-primary">Potvrdi Zahtjev</button>
+        </div>
+    </div>
+
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Dodaj Stavke u Inventar</h2>
+            <div id="addItems" class="cart-items"></div>
+            <div id="addTotal"></div>
+            <button id="confirmAdd" class="btn-secondary">Potvrdi Dodavanje</button>
+        </div>
+    </div>
+
+    <div id="alert" class="alert"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
